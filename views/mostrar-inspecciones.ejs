@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Inspecciones Registradas</title>
+</head>
+<body>
+    <div class="table-container">
+        <h1>Inspecciones Registradas</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre Embarcación</th>
+                    <th>Número Registro</th>
+                    <th>Número Patente</th>
+                    <th>Nombre Propietario</th>
+                    <th>Tipo</th>
+                    <th>Manga</th>
+                    <th>Eslora</th>
+                    <th>Puntal</th>
+                    <th>Calado</th>
+                    <th>Francobordo</th>
+                    <th>Potencia</th>
+                    <th>Fecha</th>
+                    <th>Inspector</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% inspecciones.forEach(inspeccion => { %>
+                <tr>
+                    <td><%= inspeccion.nombre_embarcacion %></td>
+                    <td><%= inspeccion.numero_registro %></td>
+                    <td><%= inspeccion.numero_patente %></td>
+                    <td><%= inspeccion.nombre_propietario %></td>
+                    <td><%= inspeccion.tipo_embarcacion %></td>
+                    <td><%= inspeccion.manga %></td>
+                    <td><%= inspeccion.eslora %></td>
+                    <td><%= inspeccion.puntal %></td>
+                    <td><%= inspeccion.calado %></td>
+                    <td><%= inspeccion.francobordo %></td>
+                    <td><%= inspeccion.potencia_motores %></td>
+                    <td><%= inspeccion.fecha_registro %></td>
+                    <td><%= inspeccion.cc_inspector %></td>
+                    <td>
+                        <form action="/inspecciones/modificar-borrar" method="POST">
+                            <input type="hidden" name="id_inspeccion" value="<%= inspeccion.id %>">
+                            <button type="submit" name="accion" value="modificar" class="modify">Modificar</button>
+                            <button type="submit" name="accion" value="borrar" class="delete">Borrar</button>
+                        </form>
+                    </td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <a href="/">Regresar al Login</a>
+    </div>
+
+    <script>
+        console.log('Inspection table loaded successfully');
+    </script>
+</body>
+</html>

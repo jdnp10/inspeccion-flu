@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspección de Embarcaciones Fluviales</title>
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Tu archivo CSS -->
+    <style>
+        body {
+            background-image: url('/images/fondo.jpg'); /* Cambia el nombre de la imagen según sea necesario */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+        }
+        .btn {
+            background-color: #4CAF50; /* Color del botón */
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .btn:hover {
+            background-color: #45a049; /* Color del botón al pasar el mouse */
+        }
+        .message {
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Inspección de Embarcaciones Fluviales</h2>
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="usuario">Usuario (Cédula)</label>
+                <input type="text" id="usuario" name="usuario" required placeholder="Ingrese su cédula">
+            </div>
+            <div class="form-group">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" name="contraseña" required placeholder="Ingrese su contraseña">
+            </div>
+            <button type="submit" class="btn">Ingresar</button>
+        </form>
+        <button class="btn" onclick="window.location.href='/registro'">Registrarse</button>
+        <button class="btn" onclick="window.location.href='/mostrar-inspecciones'">Mostrar Inspecciones</button>
+    </div>
+</body>
+</html>

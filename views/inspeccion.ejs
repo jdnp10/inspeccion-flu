@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Inspección</title>
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Tu archivo CSS -->
+</head>
+<body>
+    <div class="container">
+        <h2>Registro de Inspección</h2>
+        <form action="/inspeccion" method="POST">
+            <div class="form-group">
+                <label for="nombre_embarcacion">Nombre de la Embarcación</label>
+                <input type="text" id="nombre_embarcacion" name="nombre_embarcacion" required maxlength="20">
+            </div>
+            <div class="form-group">
+                <label for="numero_registro">Número de Registro</label>
+                <input type="number" id="numero_registro" name="numero_registro" required>
+            </div>
+            <div class="form-group">
+                <label for="numero_patente">Número de Patente</label>
+                <input type="number" id="numero_patente" name="numero_patente" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre_propietario">Nombre del Propietario</label>
+                <input type="text" id="nombre_propietario" name="nombre_propietario" required maxlength="20">
+            </div>
+            <div class="form-group">
+                <label for="tipo_embarcacion">Tipo de Embarcación</label>
+                <select id="tipo_embarcacion" name="tipo_embarcacion" required>
+                    <option value="remolcador">Remolcador</option>
+                    <option value="barcaza">Barcaza</option>
+                    <option value="chalupa de pesca">Chalupa de pesca</option>
+                    <option value="lancha de transporte público">Lancha de transporte público</option>
+                    <option value="lancha de transporte pasajeros">Lancha de transporte pasajeros</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="manga">Manga (cm)</label>
+                <input type="number" id="manga" name="manga" required>
+            </div>
+            <div class="form-group">
+                <label for="eslora">Eslora (cm)</label>
+                <input type="number" id="eslora" name="eslora" required>
+            </div>
+            <div class="form-group">
+                <label for="puntal">Puntal (cm)</label>
+                <input type="number" id="puntal" name="puntal" required>
+            </div>
+            <div class="form-group">
+                <label for="calado">Calado (cm)</label>
+                <input type="number" id="calado" name="calado" required>
+            </div>
+            <div class="form-group">
+                <label for="francobordo">Francobordo (cm)</label>
+                <input type="number" id="francobordo" name="francobordo" required>
+            </div>
+            <div class="form-group">
+                <label for="potencia_motores">Potencia de Motores (hp)</label>
+                <input type="number" id="potencia_motores" name="potencia_motores" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_registro">Fecha de Registro (DD/MM/AA)</label>
+                <input type="text" id="fecha_registro" name="fecha_registro" required placeholder="DD/MM/AA">
+            </div>
+            <button type="submit" class="btn">Guardar</button>
+        </form>
+        
+        <p class="message"><%= message %></p>
+    </div>
+</body>
+</html>

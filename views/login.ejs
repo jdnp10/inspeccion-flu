@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Iniciar Sesión</title>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Iniciar Sesión</h1>
+        <form action="/login" method="POST">
+            <label for="usuario">Cédula (Usuario):</label>
+            <input type="text" name="usuario" required> <!-- Cambia de 'cedula' a 'usuario' -->
+            
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" name="contraseña" required> <!-- Cambia de 'password' a 'contraseña' -->
+            
+            <button type="submit">Ingresar</button>
+        </form>
+        
+
+    <script>
+        console.log('Login page loaded successfully');
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Modificar Inspección</title>
+</head>
+<body>
+    <div class="modify-container">
+        <h1>Modificar Inspección</h1>
+        <form action="/inspecciones/modificar" method="POST">
+            <input type="hidden" name="id_inspeccion" value="<%= inspeccion.id %>">
+            
+            <label for="nombre_embarcacion">Nombre de la Embarcación:</label>
+            <input type="text" name="nombre_embarcacion" value="<%= inspeccion.nombre_embarcacion %>" required>
+
+            <label for="numero_registro">Número de Registro:</label>
+            <input type="number" name="numero_registro" value="<%= inspeccion.numero_registro %>" required>
+
+            <label for="numero_patente">Número de Patente:</label>
+            <input type="number" name="numero_patente" value="<%= inspeccion.numero_patente %>" required>
+
+            <label for="nombre_propietario">Nombre del Propietario:</label>
+            <input type="text" name="nombre_propietario" value="<%= inspeccion.nombre_propietario %>" required>
+
+            <label for="tipo_embarcacion">Tipo de Embarcación:</label>
+            <select name="tipo_embarcacion" required>
+                <option value="remolcador" <%= inspeccion.tipo_embarcacion === 'remolcador' ? 'selected' : '' %>>Remolcador</option>
+                <option value="barcaza" <%= inspeccion.tipo_embarcacion === 'barcaza' ? 'selected' : '' %>>Barcaza</option>
+                <option value="chalupa de pesca" <%= inspeccion.tipo_embarcacion === 'chalupa de pesca' ? 'selected' : '' %>>Chalupa de Pesca</option>
+                <option value="lancha de transporte publico" <%= inspeccion.tipo_embarcacion === 'lancha de transporte publico' ? 'selected' : '' %>>Lancha de Transporte Público</option>
+                <option value="lancha de transporte pasajeros" <%= inspeccion.tipo_embarcacion === 'lancha de transporte pasajeros' ? 'selected' : '' %>>Lancha de Transporte Pasajeros</option>
+            </select>
+
+            <label for="manga">Manga (cm):</label>
+            <input type="number" name="manga" value="<%= inspeccion.manga %>" required>
+
+            <label for="eslora">Eslora (cm):</label>
+            <input type="number" name="eslora" value="<%= inspeccion.eslora %>" required>
+
+            <label for="puntal">Puntal (cm):</label>
+            <input type="number" name="puntal" value="<%= inspeccion.puntal %>" required>
+
+            <label for="calado">Calado (cm):</label>
+            <input type="number" name="calado" value="<%= inspeccion.calado %>" required>
+
+            <label for="francobordo">Francobordo (cm):</label>
+            <input type="number" name="francobordo" value="<%= inspeccion.francobordo %>" required>
+
+            <label for="potencia_motores">Potencia de Motores (HP):</label>
+            <input type="number" name="potencia_motores" value="<%= inspeccion.potencia_motores %>" required>
+
+            <label for="fecha_registro">Fecha de Registro:</label>
+            <input type="date" name="fecha_registro" value="<%= inspeccion.fecha_registro %>" required>
+
+            <button type="submit">Guardar Cambios</button>
+        </form>
+        <a href="/inspecciones/mostrar">Cancelar</a>
+    </div>
+
+    <script>
+        console.log('Modify page loaded successfully');
+    </script>
+</body>
+</html>

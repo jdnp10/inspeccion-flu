@@ -1,0 +1,18 @@
+{
+    "name": "inspeccion-embarcaciones",
+    "version": "1.0.0",
+    "description": "Aplicación para inspección de embarcaciones",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "ejs": "^3.1.6",
+        "express": "^4.17.1",
+        "express-session": "^1.18.0",
+        "inspeccion-embarcaciones": "file:",
+        "mysql": "^2.18.1",
+        "nodemailer": "^6.6.3"
+    }
+}
