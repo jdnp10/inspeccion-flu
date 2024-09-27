@@ -102,3 +102,47 @@ button.admin {
     margin-top: 20px;
     width: 150px;
 }
+.table-container {
+    max-width: 800px; /* Ajusta el ancho máximo de la tabla */
+    margin: 20px auto; /* Centra la tabla en la página */
+    border: 1px solid #ccc; /* Borde alrededor de la tabla */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Para evitar que el contenido sobresalga */
+}
+
+table {
+    width: 100%; /* La tabla ocupa todo el ancho del contenedor */
+    border-collapse: collapse; /* Colapsa los bordes */
+}
+
+th, td {
+    border: 1px solid #ccc; /* Borde para celdas */
+    padding: 10px; /* Espaciado interno */
+    text-align: left; /* Alineación del texto */
+}
+
+th {
+    background-color: #f2f2f2; /* Color de fondo para los encabezados */
+    font-weight: bold; /* Negrita para el texto de encabezados */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Color de fondo alternativo para filas */
+}
+
+tr:hover {
+    background-color: #e0e0e0; /* Color de fondo al pasar el mouse */
+}
+
+.btn {
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cursor de mano */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.btn:hover {
+    background-color: #45a049; /* Color de fondo al pasar el mouse */
+}

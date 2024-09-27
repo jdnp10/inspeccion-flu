@@ -2,11 +2,11 @@
 const mysql = require('mysql');
 
 const db = mysql.createConnection({
-    host: '127.0.0.1', // Corregido, las comillas son necesarias
-    user: 'root', // Usuario root
-    password: '', // Si no tienes contraseña, déjalo vacío pero con las comillas
-    database: 'insembd', // Nombre de tu base de datos entre comillas
-    port: 3306 // El puerto de MySQL que usas
+    host: '127.0.0.1', 
+    user: 'root', 
+    password: '', 
+    database: 'insembd', 
+    port: 3306 
 });
 
 db.connect((err) => {
